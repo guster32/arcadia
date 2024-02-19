@@ -1,15 +1,15 @@
 [submodule "recipes/recipes/meta-openembedded"]
-	path = recipes/recipes/meta-openembedded
+	path = recipes/openembedded/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
 [submodule "recipes/poky"]
-	path = recipes/poky
+	path = poky
 	url = git://git.yoctoproject.org/poky
 [submodule "recipes/recipes/meta-clang"]
-	path = recipes/recipes/meta-clang
+	path = recipes/kraj/meta-clang
 	url = https://github.com/kraj/meta-clang.git
 [submodule "recipes/recipes/meta-arcadia"]
-	path = recipes/recipes/meta-arcadia
+	path = recipes/guster32/meta-arcadia
 	url = https://github.com/guster32/meta-arcadia.git
 [submodule "recipes/recipes/meta-odroid"]
-	path = recipes/recipes/meta-odroid
+	path = recipes/guster32/meta-odroid
 	url = https://github.com/guster32/meta-odroid.git
