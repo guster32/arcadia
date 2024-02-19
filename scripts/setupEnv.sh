@@ -2,7 +2,7 @@
 #set -o xtrace
 FULL_PATH=$(dirname "$(realpath "$BASH_SOURCE")")/..
 
-BUILD_DIR=$FULL_PATH/.build
+BUILD_DIR=$FULL_PATH/.build/$1
 BUILD_CONF_DIR=$BUILD_DIR/conf
 DL_DIR=$FULL_PATH/.download
 SSTATE_DIR=$FULL_PATH/.sstate-cache
@@ -15,7 +15,7 @@ mkdir -p $SSTATE_DIR
 mkdir -p $TMP_DIR
 
 chmod 777 $BUILD_DIR
-chmod -R 777 $BUILD_CONF_DIR
+chmod 777 $BUILD_CONF_DIR
 chmod 777 $DL_DIR
 chmod 777 $SSTATE_DIR
 chmod 777 $TMP_DIR
