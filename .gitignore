@@ -1,2 +1,5 @@
 .build
+.download
+.sstate-cache
+.tmp
 buildlog

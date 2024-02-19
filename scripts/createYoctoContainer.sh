@@ -90,11 +90,8 @@ buildah config --env USER=${user} $container
 buildah config --user ${user} $container
 buildah config --workingdir /home/${user} $container
 
-#git clone projects
-buildah run $container git clone -b nanbield --depth=1 https://github.com/guster32/arcadia.git /home/${user}/arcadia
-
 buildah run $container chown -R ${user} /home/${user}
 
 # Finally save the running container to an image
-buildah commit --format docker $container yocto_ubuntu_22.04:nanbield
+buildah commit --format docker $container yocto_ubuntu_22.04
 buildah unmount $container

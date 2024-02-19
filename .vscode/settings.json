@@ -3,13 +3,25 @@
     "${workspaceFolder}/sources/poky/bitbake/lib",
     "${workspaceFolder}/sources/poky/meta/lib",
     "${workspaceFolder}/poky/bitbake/lib",
-    "${workspaceFolder}/poky/meta/lib"
+    "${workspaceFolder}/poky/meta/lib",
+    "poky/bitbake/lib",
+    "poky/meta/lib",
+    "/home/builduser/mnt/arcadiapoky/bitbake/lib",
+    "/home/builduser/mnt/arcadiapoky/meta/lib",
+    "/home/builduser/mnt/arcadia/poky/bitbake/lib",
+    "/home/builduser/mnt/arcadia/poky/meta/lib"
   ],
   "python.analysis.extraPaths": [
     "${workspaceFolder}/sources/poky/bitbake/lib",
     "${workspaceFolder}/sources/poky/meta/lib",
     "${workspaceFolder}/poky/bitbake/lib",
-    "${workspaceFolder}/poky/meta/lib"
+    "${workspaceFolder}/poky/meta/lib",
+    "poky/bitbake/lib",
+    "poky/meta/lib",
+    "/home/builduser/mnt/arcadiapoky/bitbake/lib",
+    "/home/builduser/mnt/arcadiapoky/meta/lib",
+    "/home/builduser/mnt/arcadia/poky/bitbake/lib",
+    "/home/builduser/mnt/arcadia/poky/meta/lib"
   ],
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false,
@@ -21,10 +33,14 @@
     "files.eol": "\n",
     "files.trimTrailingWhitespace": false
   },
-  "bitbake.commandWrapper": "${workspaceFolder}/scripts/build.sh --",
-  "bitbake.pathToBitbakeFolder": "${workspaceFolder}/poky/bitbake",
-  "bitbake.pathToBuildFolder": "${workspaceFolder}/.build",
-  "bitbake.pathToEnvScript": "${workspaceFolder}/poky/oe-init-build-env",
+  "bitbake.commandWrapper": "scripts/setupEnv.sh 'qemux86-64' ",
+  "bitbake.pathToBitbakeFolder": "poky/bitbake",
+  "bitbake.pathToBuildFolder": "/home/builduser/mnt/build",
+  "bitbake.pathToEnvScript": "/home/builduser/mnt/arcadia/poky/oe-init-build-env",
   "bitbake.sdkImage": "core-image-arcadia",
-  "bitbake.shouldDeepExamine": true
+  "bitbake.shouldDeepExamine": false,
+  "bitbake.workingDirectory": "",
+  "bitbake.loggingLevel": "error",
+  "bitbake.eSDKMode": false,
+  "task.saveBeforeRun": "always"
 }
