@@ -36,6 +36,8 @@ case "$1" in
    exit 1
    ;;
 esac
+chmod 777 $BUILD_CONF_DIR/bblayers.conf
+chmod 777 $BUILD_CONF_DIR/local.conf
 
 echo -e "Setting up container. Please standby..."
 launch_args="--rm --ulimit nofile=899999:899999 --pids-limit=0 -i"
@@ -47,7 +49,7 @@ launch_args+=" -v $TMP_DIR:/tmp:Z"
 launch_args+=" --workdir=/home/builduser/mnt/arcadia"
 launch_args+=" yocto_ubuntu_22.04:latest"
 
-if [ "$2" = "interactive" ]; then
+if [ -z "$2" ]; then
   launch_args="-it ${launch_args} /bin/bash"
   readarray -t args < <(echo "$launch_args" | xargs)
   podman run ${args[@]}
