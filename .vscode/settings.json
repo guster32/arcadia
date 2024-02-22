@@ -42,5 +42,15 @@
   "bitbake.workingDirectory": "",
   "bitbake.loggingLevel": "error",
   "bitbake.eSDKMode": false,
-  "task.saveBeforeRun": "always"
+  "task.saveBeforeRun": "always",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/.build/**":true,
+    "**/.download/**":true,
+    "**/.sstate-cache/**":true,
+    "**/.tmp/**":true
+  }
 }
