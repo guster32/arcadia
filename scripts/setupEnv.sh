@@ -8,17 +8,14 @@ DL_DIR=$FULL_PATH/.download
 SSTATE_DIR=$FULL_PATH/.sstate-cache
 TMP_DIR=$FULL_PATH/.tmp/$1
 
+rm -rf $BUILD_DIR
+rm -rf $TMP_DIR
 
 mkdir -p $BUILD_CONF_DIR
 mkdir -p $DL_DIR
 mkdir -p $SSTATE_DIR
 mkdir -p $TMP_DIR
 
-chmod 777 $BUILD_DIR
-chmod 777 $BUILD_CONF_DIR
-chmod 777 $DL_DIR
-chmod 777 $SSTATE_DIR
-chmod 777 $TMP_DIR
 
 echo -e "Configuring machine: $1"
 
@@ -36,11 +33,9 @@ case "$1" in
    exit 1
    ;;
 esac
-chmod 777 $BUILD_CONF_DIR/bblayers.conf
-chmod 777 $BUILD_CONF_DIR/local.conf
 
 echo -e "Setting up container. Please standby..."
-launch_args="--rm --ulimit nofile=899999:899999 --pids-limit=0 -i"
+launch_args="--rm --userns=keep-id --ulimit nofile=899999:899999 --pids-limit=0 -i"
 launch_args+=" -v $FULL_PATH:/home/builduser/mnt/arcadia:Z"
 launch_args+=" -v $BUILD_DIR:/home/builduser/mnt/build:Z"
 launch_args+=" -v $DL_DIR:/home/builduser/mnt/download:Z"
