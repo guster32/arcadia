@@ -52,5 +52,28 @@
     "**/.download/**":true,
     "**/.sstate-cache/**":true,
     "**/.tmp/**":true
-  }
+  },
+  "search.exclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/.build/**":true,
+    "**/.download/**":true,
+    "**/.sstate-cache/**":true,
+    "**/.tmp/**":true
+  },
+  "C_Cpp.files.exclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/.build/**":true,
+    "**/.download/**":true,
+    "**/.sstate-cache/**":true,
+    "**/.tmp/**":true
+  },
+  "python.analysis.exclude": [
+      "**/.build/**"
+  ]
 }
