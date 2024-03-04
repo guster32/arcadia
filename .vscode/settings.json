@@ -42,7 +42,7 @@
   "bitbake.workingDirectory": "",
   "bitbake.loggingLevel": "error",
   "bitbake.eSDKMode": false,
-  "task.saveBeforeRun": "always",
+  "task.saveBeforeRun": "never",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
