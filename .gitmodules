@@ -13,3 +13,6 @@
 [submodule "recipes/recipes/meta-odroid"]
 	path = recipes/guster32/meta-odroid
 	url = https://github.com/guster32/meta-odroid.git
+[submodule "recipes/openembedded/meta-qt5"]
+	path = recipes/openembedded/meta-qt5
+	url = https://github.com/meta-qt5/meta-qt5.git
