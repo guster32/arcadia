@@ -33,7 +33,7 @@
     "files.eol": "\n",
     "files.trimTrailingWhitespace": false
   },
-  "bitbake.commandWrapper": "scripts/setupEnv.sh 'qemux86-64' ",
+  "bitbake.commandWrapper": "scripts/setupEnv.sh 'odroid-xu4' ",
   "bitbake.pathToBitbakeFolder": "poky/bitbake",
   "bitbake.pathToBuildFolder": "/home/builduser/mnt/build",
   "bitbake.pathToEnvScript": "/home/builduser/mnt/arcadia/poky/oe-init-build-env",
